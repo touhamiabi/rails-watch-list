@@ -1,0 +1,15 @@
+<h1>Show List</h1>
+
+
+<p><%= @list.name %></p>
+<% @list.movies.each do |f| %>
+  <ul>
+    <li><%= f.title %></li>
+    <li><%= f.overview %></li>
+    <li><%= f.poster_url %></li>
+    <li><%= f.rating %></li>
+  </ul>
+<%end %>
+
+<br>
+<%= link_to "home", lists_path %>
