@@ -5,13 +5,12 @@
 <% @list.movies.each do |f| %>
   <ul>
     <li><%= f.title %></li>
-    <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
     <li><%= f.overview %></li>
     <li>rating: <%= f.rating %></li>
     <li><%= image_tag f.poster_url %></li>
-
   </ul>
 <%end %>
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 
 <br>
 <%= link_to "home", lists_path %>
